@@ -42,12 +42,31 @@ def home():
     p_date.append(main_article['publishedAt'])
     url.append(main_article['url'])
 
+
+  news_all = []
+  desc_all = []
+  img_all = []
+  p_date_all = []
+  url_all = []
+
+  #make another loop for all articles
+  for i in range(len(a_articles)):
+    a_articles = a_articles[i]
+
+    #append all the contents in to each of lists
+    news_all.append(main_article['title'])
+    desc_all.append(main_article['description'])
+    img_all.append(main_article['urlToImage'])
+    p_date_all.append(main_article['publishedAt'])
+    url_all.append(main_article['url'])
+
     #make a zip for find the contents directly and shortly
     contents = zip(news,desc,img,p_date,url)
+    all = zip(news_all,desc_all,img_all,p_date_all,url_all)
 
   #pass it in the render file
 
-  return render_template('home.html',contents=contents)
+  return render_template('home.html',contents=contents, all=all)
 
 
 if __name__ == '__main__':
