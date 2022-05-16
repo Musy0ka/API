@@ -15,10 +15,14 @@ def home():
 
   #for top headlines of news
   top_headlines = newsapi.get_top_headlines(sources = 'bbc-news')
+  #for all the main articles
+  all_articles = newsapi.get_everything(sources='bbc-news')
   # sources is meant by, where the news comes into your app by api
 
   #fetch all the articles of top headlines news
   t_articles = top_headlines['articles']
+  #fetch all the articles of top headlines news
+  a_articles = all_articles['articles']
 
   #make a list of content to store the value on that list
   news = []
