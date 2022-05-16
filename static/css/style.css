@@ -22,7 +22,7 @@ nav{
   background-color: red;
   border-top: 1px solid black !important;
   position: absolute;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0.4);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -51,7 +51,7 @@ nav .menu li a {
   text-transform: uppercase;
   align-items: center;
   padding: 0px 22px;
-  font-size: 35px;
+  font-size: 15px;
   font-weight: bold;
   color: white;
   font-family: 'Popping', sans-serif;
@@ -65,12 +65,12 @@ nav .menu li a:hover {
 }
 
 #main{
-  padding: 98px;
+  padding-top: 98px;
 }
 
 .banner{
   height: 620px;
-  width: 100px;
+  width: 100%;
   display: flex;
   flex-wrap: column;
   justify-content: center;
@@ -148,11 +148,11 @@ nav .menu li a:hover {
 }
 
 wrapper.item{
-  height: 100px;
+  height: 300px;
   min-width: 30%;
   border-radius: 20px;
   margin: 10px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0.4);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   padding: 0.5px;
   flex-flow: column wrap;
   border-bottom: 1px white;
@@ -173,7 +173,7 @@ wrapper.item{
   padding: 1px;
 }
 
-.c-box .center{
+.c-box .content {
   height: content;
   min-width: 30%;
   display: flex;
@@ -182,7 +182,7 @@ wrapper.item{
 }
 
 
-.c-box .center p{
+.c-box .content p{
   color: #fff;
   font-size: 15px;
   font-weight: bold;
@@ -190,7 +190,7 @@ wrapper.item{
 }
 
 
-.c-box .center h2{
+.c-box .content h2{
   color: yellow;
   font-size: 20px;
   font-weight: bold;
