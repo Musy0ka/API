@@ -51,14 +51,14 @@ def home():
 
   #make another loop for all articles
   for i in range(len(a_articles)):
-    a_articles = a_articles[i]
+    a_article = a_articles[i]
 
     #append all the contents in to each of lists
-    news_all.append(main_article['title'])
-    desc_all.append(main_article['description'])
-    img_all.append(main_article['urlToImage'])
-    p_date_all.append(main_article['publishedAt'])
-    url_all.append(main_article['url'])
+    news_all.append(a_article['title'])
+    desc_all.append(a_article['description'])
+    img_all.append(a_article['urlToImage'])
+    p_date_all.append(a_article['publishedAt'])
+    url_all.append(a_article['url'])
 
     #make a zip for find the contents directly and shortly
     contents = zip(news,desc,img,p_date,url)
@@ -66,7 +66,7 @@ def home():
 
   #pass it in the render file
 
-  return render_template('home.html',contents=contents, all=all)
+  return render_template('home.html', contents=contents, all=all)
 
 
 if __name__ == '__main__':
