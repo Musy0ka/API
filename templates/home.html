@@ -23,7 +23,12 @@
 <section id="main">
   <div class="banner"><img src="" alt=""></div>
   <div class="head">TODAY'S TOP HEADLINES</div>
-  #
+    {% for title,desc,img,p_date,url in contents%}
+    <div class="wrapper">
+      <div class="item"><a href="{{url}}"><img src="{{img}}"></a></div>
+    </div>
+    {% endfor %}
+  
   <div class="head">TODAY'S NEWS</div>
   #
 
